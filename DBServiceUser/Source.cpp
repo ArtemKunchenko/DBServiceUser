@@ -14,6 +14,9 @@
 //4.  Delete
 
 #include<iostream>
+#include <string>
+#include "Vector.h"
+#include "Vector.cpp"
 using namespace std;
 
 int main()
