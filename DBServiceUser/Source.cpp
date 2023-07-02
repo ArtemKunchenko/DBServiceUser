@@ -19,12 +19,11 @@ using namespace std;
 
 int main()
 {
-	User u1(1, "Ivan", "Ivanov", "3-89-58");
+	User u1(2, "Ivan", "Ivanov", "3-89-58");
+	User u2(1, "Alex", "Alexandrov", "4-98-45");
 	cout << u1;
-	User u2;
-	cin >> u2;
 	cout << u2;
-	
+
 	system("pause");
 	return 0;
 }

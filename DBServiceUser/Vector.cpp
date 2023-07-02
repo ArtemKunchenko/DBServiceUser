@@ -116,7 +116,7 @@ void Vector<T>::pop_back()
 }
 
 template<class T>
-int Vector<T>::size()
+int Vector<T>::getSize()
 {
 	return _size;
 }
