@@ -2,7 +2,7 @@
 template<class T>
 Vector<T>::Vector() : _data(nullptr), _size(0)
 {
-	cout << "Created vector:\t" << this << endl;
+	/*cout << "Created vector:\t" << this << endl;*/
 }
 
 template<class T>
@@ -14,7 +14,7 @@ Vector<T>::Vector(const Vector& other)
 	{
 		_data[i] = other._data[i];
 	}
-	cout << "Constructor copy:\t" << this << endl;
+	/*cout << "Constructor copy:\t" << this << endl;*/
 }
 
 template<class T>
@@ -25,7 +25,7 @@ Vector<T>::Vector(Vector&& other)
 		_data = other._data;
 	other._size = 0;
 	other._data = nullptr;
-	cout << "Constructor moving:\t" << this << endl;
+	/*cout << "Constructor moving:\t" << this << endl;*/
 }
 
 template<class T>
@@ -37,7 +37,7 @@ Vector<T>& Vector<T>::operator= (const Vector& other)
 	{
 		_data[i] = other._data[i];
 	}
-	cout << "Operator copy:\t" << this << endl;
+	/*cout << "Operator copy:\t" << this << endl;*/
 	return *this;
 }
 
@@ -49,7 +49,7 @@ Vector<T>& Vector<T>::operator= (Vector&& other)
 		_data = other._data;
 	other._size = 0;
 	other._data = nullptr;
-	cout << "Operator moving:\t" << this << endl;
+	/*cout << "Operator moving:\t" << this << endl;*/
 	return *this;
 }
 
@@ -65,7 +65,7 @@ Vector<T>::~Vector()
 {
 	if (_data != nullptr)
 		delete[] _data;
-	cout << "Destructor:\t" << this << endl;
+	/*cout << "Destructor:\t" << this << endl;*/
 }
 
 template<class T>

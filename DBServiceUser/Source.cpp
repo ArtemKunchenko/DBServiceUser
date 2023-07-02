@@ -14,13 +14,17 @@
 //4.  Delete
 
 #include<iostream>
-#include <string>
-#include "Vector.h"
-#include "Vector.cpp"
+#include "User.h"
 using namespace std;
 
 int main()
 {
+	User u1(1, "Ivan", "Ivanov", "3-89-58");
+	cout << u1;
+	User u2;
+	cin >> u2;
+	cout << u2;
+	
 	system("pause");
 	return 0;
 }
