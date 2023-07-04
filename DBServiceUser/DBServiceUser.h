@@ -16,6 +16,7 @@ public:
 	void Update(int index);
 	void Delete();
 	void Delete(int index);
+	void Sort();
 private:
 	Vector<User> _users;
 	int _index;

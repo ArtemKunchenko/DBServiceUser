@@ -35,7 +35,7 @@ int main()
 	U.Read(2);*/
 	cout << endl;
 	/*U.Update();*/
-	U.Delete();
+	U.Sort();
 	cout << endl;
 	U.Read();
 	

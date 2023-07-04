@@ -70,3 +70,20 @@ void DBServiceUser::Delete(int index)
 	}
 	else cout << "User doesn't exist\n";
 }
+
+void DBServiceUser::Sort()
+{
+	User temp;
+	for (int i = 0; i < _users.getSize() - 1; i++)
+	{
+		for (int j = i + 1; j < _users.getSize(); j++)
+		{
+			if (_users[j].getId() < _users[i].getId())
+			{
+				temp =_users[j];
+				_users[j]= _users[i];
+				_users[i]=temp;
+			}
+		}
+	}
+}
