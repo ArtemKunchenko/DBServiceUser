@@ -8,8 +8,16 @@ using namespace std;
 class DBServiceUser
 {
 public:
+	void Create();
+	void Create(User user);
+	void Read();
+	void Read(int index);
+	void Update();
+	void Update(int index);
+	void Delete();
+	void Delete(int index);
 private:
 	Vector<User> _users;
-
+	int _index;
 };
 

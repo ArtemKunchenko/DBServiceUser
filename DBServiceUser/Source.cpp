@@ -15,14 +15,31 @@
 
 #include<iostream>
 #include "User.h"
+#include "DBServiceUser.h"
 using namespace std;
 
 int main()
 {
 	User u1(2, "Ivan", "Ivanov", "3-89-58");
 	User u2(1, "Alex", "Alexandrov", "4-98-45");
-	cout << u1;
-	cout << u2;
+	User u3(3, "Daniel", "Gordon", "5-87-47");
+	/*cout << u1;
+	cout << u2;*/
+	DBServiceUser U;
+	U.Create(u1);
+	U.Create(u2);
+	U.Create(u3);
+	/*U.Create();*/
+	U.Read();
+	/*U.Read(1);
+	U.Read(2);*/
+	cout << endl;
+	/*U.Update();*/
+	U.Delete();
+	cout << endl;
+	U.Read();
+	
+
 
 	system("pause");
 	return 0;

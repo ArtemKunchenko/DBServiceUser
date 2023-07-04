@@ -17,6 +17,7 @@ public:
 	friend ostream& operator<<<T> (ostream& out, const Vector& vector);
 	void push_back(T item); // add a new item to the end
 	void pop_back(); // remove the last element
+	void delete_element(int index);
 	int getSize(); //return size
 	void clear();
 	T getElement(int index);

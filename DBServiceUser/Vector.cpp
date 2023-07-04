@@ -74,13 +74,13 @@ void Vector<T>::push_back(T item)
 	if (_data != nullptr)
 	{
 		T* temp = new T[_size];
-		for (size_t i = 0; i < _size; i++)
+		for (int i = 0; i < _size; i++)
 		{
 			temp[i] = _data[i];
 		}
 		delete[] _data;
-		_data = new T[++_size]{ 0 };
-		for (size_t i = 0; i < _size - 1; i++)
+		_data = new T[++_size];
+		for (int i = 0; i < _size - 1; i++)
 		{
 			_data[i] = temp[i];
 		}
@@ -100,14 +100,40 @@ void Vector<T>::pop_back()
 	if (_data != nullptr)
 	{
 		T* temp = new T[--_size];
-		for (size_t i = 0; i < _size; i++)
+		for (int i = 0; i < _size; i++)
 		{
 			temp[i] = _data[i];
 		}
 		delete[] _data;
 		if (_size == 0) _data = nullptr;
 		_data = new T[_size];
-		for (size_t i = 0; i < _size; i++)
+		for (int i = 0; i < _size; i++)
+		{
+			_data[i] = temp[i];
+		}
+		delete[] temp;
+	}
+}
+
+template<class T>
+void Vector<T>::delete_element(int index)
+{
+	if (_data != nullptr)
+	{
+		T* temp = new T[--_size];
+		for (int i = 0, j=0; i < _size; i++)
+		{
+			if (index!=i)
+			{
+				temp[j] = _data[i];
+				j++;
+			}
+			
+		}
+		delete[] _data;
+		if (_size == 0) _data = nullptr;
+		_data = new T[_size];
+		for (int i = 0; i < _size; i++)
 		{
 			_data[i] = temp[i];
 		}
