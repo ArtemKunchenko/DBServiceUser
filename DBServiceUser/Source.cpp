@@ -21,24 +21,35 @@ using namespace std;
 int main()
 {
 	User u1(2, "Ivan", "Ivanov", "3-89-58");
-	User u2(1, "Alex", "Alexandrov", "4-98-45");
+	User u2(1, "Alex", "Alexandrov", "1-98-45");
 	User u3(3, "Daniel", "Gordon", "5-87-47");
+	User u4(4, "Alen", "Gordons", "5-87-45");
 	/*cout << u1;
 	cout << u2;*/
 	DBServiceUser U;
 	U.Create(u1);
 	U.Create(u2);
 	U.Create(u3);
+	U.Create(u4);
 	/*U.Create();*/
 	U.Read();
 	/*U.Read(1);
 	U.Read(2);*/
 	cout << endl;
 	/*U.Update();*/
-	U.Sort();
+	U.SortId();
 	cout << endl;
 	U.Read();
-	
+	U.SortName();
+	cout << endl;
+	U.Read();
+	U.SortSurname();
+	cout << endl;
+	U.Read();
+	U.SortPhone();
+	cout << endl;
+	U.Read();
+
 
 
 	system("pause");

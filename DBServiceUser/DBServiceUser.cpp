@@ -71,7 +71,7 @@ void DBServiceUser::Delete(int index)
 	else cout << "User doesn't exist\n";
 }
 
-void DBServiceUser::Sort()
+void DBServiceUser::SortId()
 {
 	User temp;
 	for (int i = 0; i < _users.getSize() - 1; i++)
@@ -83,6 +83,60 @@ void DBServiceUser::Sort()
 				temp =_users[j];
 				_users[j]= _users[i];
 				_users[i]=temp;
+			}
+		}
+	}
+}
+
+void DBServiceUser::SortName()
+{
+	User temp;
+	for (int i = 0; i < _users.getSize() - 1; i++)
+	{
+		for (int j = i + 1; j < _users.getSize(); j++)
+		{
+			
+			if (_users[j].getName() < _users[i].getName())
+			{
+				temp = _users[j];
+				_users[j] = _users[i];
+				_users[i] = temp;
+			}
+		}
+	}
+}
+
+void DBServiceUser::SortSurname()
+{
+	User temp;
+	for (int i = 0; i < _users.getSize() - 1; i++)
+	{
+		for (int j = i + 1; j < _users.getSize(); j++)
+		{
+
+			if (_users[j].getSurname() < _users[i].getSurname())
+			{
+				temp = _users[j];
+				_users[j] = _users[i];
+				_users[i] = temp;
+			}
+		}
+	}
+}
+
+void DBServiceUser::SortPhone()
+{
+	User temp;
+	for (int i = 0; i < _users.getSize() - 1; i++)
+	{
+		for (int j = i + 1; j < _users.getSize(); j++)
+		{
+
+			if (_users[j].getPhone() < _users[i].getPhone())
+			{
+				temp = _users[j];
+				_users[j] = _users[i];
+				_users[i] = temp;
 			}
 		}
 	}

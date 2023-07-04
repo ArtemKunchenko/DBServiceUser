@@ -16,7 +16,10 @@ public:
 	void Update(int index);
 	void Delete();
 	void Delete(int index);
-	void Sort();
+	void SortId();
+	void SortName();
+	void SortSurname();
+	void SortPhone();
 private:
 	Vector<User> _users;
 	int _index;
